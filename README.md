@@ -1,9 +1,9 @@
 # 💳 Credit Risk Assessment & Loan Decision System
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
-![XGBoost](https://img.shields.io/badge/XGBoost-Gradient_Boosting-red)
-![SHAP](https://img.shields.io/badge/Explainable-AI-green)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange)
+![XGBoost](https://img.shields.io/badge/XGBoost-Gradient%20Boosting-red)
+![SHAP](https://img.shields.io/badge/Explainable-AI-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
@@ -16,47 +16,75 @@
 
 # 📌 Project Overview
 
-This project develops an end-to-end credit risk assessment system that predicts borrower default probability using machine learning and supports loan approval decisions through Expected Loss modelling and risk-based pricing.
+Banks and financial institutions must accurately assess borrower risk before approving loans. Poor lending decisions increase default rates and financial losses. This project develops an end-to-end credit risk assessment system that predicts borrower default probability using machine learning and supports lending decisions through Expected Loss modelling, stress testing, and risk-based pricing.
 
 ---
 
-# 🎯 Features
+# 🎯 Business Problem
 
-- Probability of Default (PD) Prediction
+Traditional credit assessment often relies on fixed scoring rules that may not fully capture borrower risk. This project demonstrates how machine learning can improve credit risk assessment by:
+
+- Predicting Probability of Default (PD)
+- Quantifying portfolio losses
+- Supporting loan approval decisions
+- Recommending risk-based interest rates
+- Explaining predictions using Explainable AI
+
+---
+
+# 📂 Dataset
+
+- 1,000 loan applications
+- 48 borrower features
+- Binary classification
+- Target Variable:
+  - 0 = Non-default
+  - 1 = Default
+
+---
+
+# ⚙ Project Workflow
+
+```
+Loan Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Train/Test Split
+      │
+      ▼
+Model Training
+      │
+      ▼
+Model Evaluation
+      │
+      ▼
+Expected Loss Modelling
+      │
+      ▼
+Stress Testing
+      │
+      ▼
+Loan Decision Engine
+      │
+      ▼
+SHAP Explainability
+```
+
+---
+
+# 🤖 Machine Learning Models
+
 - Logistic Regression
 - Random Forest
 - XGBoost
-- Expected Loss (PD × LGD × EAD)
-- Stress Testing
-- Loan Approval Recommendation
-- Interest Rate Recommendation
-- SHAP Explainability
-- Risk Segmentation
 
----
-
-# 📊 Machine Learning Pipeline
-
-1. Data Cleaning
-2. Feature Engineering
-3. Model Training
-4. Model Evaluation
-5. Expected Loss Calculation
-6. Stress Testing
-7. SHAP Explainability
-8. Loan Decision Engine
-
----
-
-# 📈 Model Evaluation
-
-Models compared:
-
-- Logistic Regression
-- Random Forest
-- XGBoost
-
-Evaluation Metrics:
+Evaluation Metrics
 
 - Accuracy
 - Precision
@@ -66,26 +94,66 @@ Evaluation Metrics:
 
 ---
 
-# 💰 Financial Analytics
+# 💰 Financial Risk Analytics
 
 The project calculates:
 
 - Probability of Default (PD)
 - Loss Given Default (LGD)
 - Exposure at Default (EAD)
-- Expected Loss
+- Expected Loss (PD × LGD × EAD)
 - Portfolio Expected Loss
 - Risk Adjusted Profit
 
 ---
 
+# 📈 Stress Testing
+
+The portfolio is evaluated under stressed economic conditions by increasing default probabilities, allowing expected losses to be compared between normal and adverse scenarios.
+
+---
+
 # 🔍 Explainable AI
 
-SHAP is used to explain:
+SHAP was integrated to provide transparent explanations for each prediction.
 
-- Individual borrower decisions
-- Feature importance
-- Risk drivers
+The model explains:
+
+- Why a borrower was classified as high risk
+- Most influential borrower characteristics
+- Overall feature importance
+
+---
+
+# 📊 Key Features
+
+✔ Probability of Default Prediction
+
+✔ Loan Approval Recommendation
+
+✔ Interest Rate Recommendation
+
+✔ Portfolio Risk Analysis
+
+✔ Expected Loss Modelling
+
+✔ Stress Testing
+
+✔ SHAP Explainability
+
+---
+
+# 📁 Repository Structure
+
+```
+Credit-Risk-System/
+│
+├── notebook.ipynb
+├── README.md
+├── dataset.csv
+├── images/
+└── requirements.txt
+```
 
 ---
 
@@ -101,12 +169,13 @@ SHAP is used to explain:
 
 ---
 
-# 📌 Future Improvements
+# 🚀 Future Improvements
 
-- Hyperparameter Optimisation
 - Probability Calibration
+- Hyperparameter Optimisation
 - Streamlit Dashboard
 - Real-Time Loan Approval API
+- Basel III Capital Calculation
 
 ---
 
